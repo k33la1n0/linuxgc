@@ -9,7 +9,7 @@ go in the new dir:
 cd ~/bin
 
 download the script:
-git clone https://github.com/k33la1n0/lgc.git
+git clone https://github.com/k33la1n0/linuxgc
 
 go in the downloade dir:
 cd lgc
