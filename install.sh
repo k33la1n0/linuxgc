@@ -19,18 +19,6 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
 sudo chmod +x start.sh
 sudo modprobe v4l2loopback video_nr=5 card_label=“vcam”
-echo ""
-echo "-----------------------------------"
-echo "Your Virtual Cam is named as vcam"
-echo ""
-echo "It is recommended to use Firefox for"
-echo "streaming gif's over your virtual cam"
-echo ""
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-echo "Thank you for install und use, have fun"
-echo ""
-echo "Now you can start your vcam and gif-streaming"
-echo "with ./start.sh"
 fi
 echo ""
 echo "-----------------------------------"
