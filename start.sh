@@ -13,7 +13,9 @@ file[i]=$j
 i=$(( i + 1 ))
 done
 echo "+++++++++++++++++++++++++++++++++++"
-echo "You can close with Strg C"
+echo "Exit with Strg C BEFORE you enter a number"
+echo ""
+echo "Restart wit Strg C AFTER you enter a number"
 echo ""
 echo "Make sure to disable the webcam"
 echo "before selecting a new gif"
