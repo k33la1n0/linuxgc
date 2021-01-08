@@ -1,26 +1,26 @@
-# linuxgc
+## linuxgc
 A little shell script to play gif's over a virtual webcam with ffmpeg and v4l2. All what you need is a Terminal (a Bash). It is recommended to use firefox for streaming gif's over webcam.
 
-# Install
-install git: sudo apt install git wget -y
+## Install
+install git: `sudo apt install git wget -y`
 
 create a new dir in your home:
-mkdir ~/bin
+`mkdir ~/bin`
 
 go in the new dir:
-cd ~/bin
+`cd ~/bin`
 
 download the script:
-git clone https://github.com/k33la1n0/linuxgc
+`git clone https://github.com/k33la1n0/linuxgc`
 
 go in the downloade dir:
-cd lgc
+`cd linuxgc`
 
 give the install-script execute-right (x):
-sudo chmod +x install.sh
+`sudo chmod +x install.sh`
 
-INSTALL: ./install.sh
+INSTALL: `./install.sh`
 
-# Start
+## Start
 you can start the script:
-./start.sh
+`./start.sh`
