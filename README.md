@@ -24,3 +24,6 @@ INSTALL: `./install.sh`
 ## Start
 you can start the script:
 `./start.sh`
+
+#The cat_hello.gif
+The cat_hello.gif was created by Pusheen and published on giphy.com: `https://media.giphy.com/media/JVmYAO3MkGNiM/giphy.gif`
