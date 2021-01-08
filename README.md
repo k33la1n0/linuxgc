@@ -1,5 +1,5 @@
 # linuxgc
-A little shell script to play gif's over a virtual webcam with ffmpeg and v4l2. All what you need is a Terminal (a Bash). It ist recommended to use Firefox for streaming gif's over webcam.
+A little shell script to play gif's over a virtual webcam with ffmpeg and v4l2. All what you need is a Terminal (a Bash). It is recommended to use firefox for streaming gif's over webcam.
 
 # Install
 install git: sudo apt install git wget-y
