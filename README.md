@@ -16,7 +16,7 @@ git clone https://github.com/k33la1n0/linuxgc
 go in the downloade dir:
 cd lgc
 
-imput for your terminal:
+give the install-script execute-right (x):
 sudo chmod +x install.sh
 
 # Start
