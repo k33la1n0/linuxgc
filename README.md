@@ -19,6 +19,8 @@ cd lgc
 give the install-script execute-right (x):
 sudo chmod +x install.sh
 
+INSTALL: ./install.sh
+
 # Start
 you can start the script:
 ./start.sh
