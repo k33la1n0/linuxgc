@@ -26,6 +26,11 @@ echo "----------------------------------------"
 echo "!The execute-right is give to start.sh.!"
 echo "----------------------------------------"
 echo ""
+sudo chmod +x script.sh
+echo "----------------------------------------"
+echo "!The execute-right is give to script.sh!"
+echo "----------------------------------------"
+echo ""
 sudo modprobe v4l2loopback video_nr=5 card_label=“vcam”
 echo "----------------------------------------"
 echo "!The vcam is now set up................!"
