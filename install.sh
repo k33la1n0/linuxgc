@@ -1,35 +1,51 @@
 #/bin/bash
 echo "The Install-List"
-echo "+++++++++++++++++++++++++++++++++++"
-echo "> ffmpeg"
-echo "> v4l2loopback-dkms"
-echo "> v4l-utils"
-echo "-----------------------------------"
-read -p "Are you sure? y for yes | n for no " -n 1 -r
-sudo apt install ffmpeg -y
-sudo apt install v4l2loopback-dkms -y
-sudo apt install v4l-utils -y
-echo "-----------------------------------"
-echo "Installation completed"
+echo "----------------------------------------"
+echo "!...ffmpeg.............................!"
+echo "!...v4l2loopback-dkms..................!"
+echo "!...v4l-utils..........................!"
+echo "----------------------------------------"
+echo ""
+echo "Are you sure to install?"
+echo "----------------------------------------"
+echo "!Yes is number 1 | No is number 2......!"
+echo "----------------------------------------"
+echo ""
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) sudo apt install ffmpeg v4l2loopback-dkms v4l-utils -y; break;;
+        No ) exit;;
+    esac
+done
+echo "----------------------------------------"
+echo "!The install is completed..............!"
+echo "----------------------------------------"
 echo ""
 sudo chmod +x start.sh
-echo "-----------------------------------"
-echo "Execute permissions were passed to start.sh"
+echo "----------------------------------------"
+echo "!The execute-right is give to start.sh.!"
+echo "----------------------------------------"
 echo ""
 sudo modprobe v4l2loopback video_nr=5 card_label=“vcam”
-echo "-----------------------------------"
-echo "Virtual webcam number 5 is set up"
+echo "----------------------------------------"
+echo "!The vcam is now set up................!"
+echo "----------------------------------------"
 echo ""
-echo "-----------------------------------"
-echo "Your Virtual Cam is named as vcam"
+echo "----------------------------------------"
+echo "!INFO..................................!"
+echo "!It is recommended to use Firefox for..!"
+echo "!streaming gif's over your virtual cam.!"
+echo "----------------------------------------"
 echo ""
-echo "It is recommended to use Firefox for"
-echo "streaming gif's over your virtual cam"
+echo "Would you like start"
+echo "streaming gif's with vcam?"
+echo "----------------------------------------"
+echo "!Yes is number 1 | No is number 2......!"
+echo "----------------------------------------"
 echo ""
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-echo "Thank you for install und use, have fun"
-echo ""
-echo "Now you can start your vcam and gif-streaming"
-echo "with ./start.sh"
-echo "+++++++++++++++++++++++++++++++++++"
-
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) ./script.sh; break;;
+        No ) echo "thank you for using linuxgc - have fun"; exit;;
+    esac
+done
