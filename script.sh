@@ -42,7 +42,7 @@ echo "----------------------------------------"
 echo "!Broadcasting..........................!"
 echo "----------------------------------------"
 echo ""
-ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf format=yuv420p -f v4l2 $SOURCE
+ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "hflip,format=yuv420p" -f v4l2 $SOURCE
 echo "----------------------------------------"
 echo "!feel free to restart the script.......!"
 echo "----------------------------------------"
