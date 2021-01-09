@@ -1,36 +1,23 @@
-#/bin/bash
-SOURCE="/dev/video5"
-
-echo "Please select your gif from the list"
-echo "+++++++++++++++++++++++++++++++++++"
-files=$(ls *.gif)
-i=1
-
-for j in $files
-do
-echo "$i.$j"
-file[i]=$j
-i=$(( i + 1 ))
+#bin/bash
+echo "----------------------------------------"
+echo "!For set up vcam - you need sudo.......!" 
+echo "----------------------------------------"
+echo ""
+sudo modprobe v4l2loopback video_nr=5 card_label=“vcam”
+echo "----------------------------------------"
+echo "Perfect - vcam is set up...............!"
+echo "----------------------------------------"
+echo ""
+echo "----------------------------------------"
+echo "!Would you like start..................!" 
+echo "!webcam-streaming?.....................!"
+echo "!......................................!"
+echo "!Enter 1 to yes | Enter 2 to no........!"
+echo "----------------------------------------"
+echo ""
+select yn in "yes" "no"; do
+    case $yn in
+        yes ) ./script.sh; break;;
+        no ) exit;;
+    esac
 done
-echo "+++++++++++++++++++++++++++++++++++"
-echo "Exit with Strg C BEFORE you enter a number"
-echo ""
-echo "Restart wit Strg C AFTER you enter a number"
-echo ""
-echo "Make sure to disable the webcam"
-echo "before selecting a new gif"
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-echo "Enter a number for your gif:"
-read input
-echo "+++++++++++++++++++++++++++++++++++"
-echo ""
-echo "You select the file ${file[$input]}"
-echo "-----------------------------------"
-echo "Broadcasting"
-echo ""
-echo "+++++++++++++++++++++++++++++++++++"
-ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf format=yuv420p -f v4l2 $SOURCE
-echo "+++++++++++++++++++++++++++++++++++"
-echo "feel free to restart the script"
-echo "----------------------------------"
-./start.sh
