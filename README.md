@@ -4,9 +4,9 @@ A little shell script to play gif's over a virtual webcam with ffmpeg and v4l2. 
 
 ## Control
 ### Exit
-Exit with `Strg c`  **BEFORE** you enter a number
+Exit with `Strg c`  **BEFORE** you enter a number of the gif
 ### Restart
-Restart wit `Strg c` **AFTER** you enter a number
+Restart wit `Strg c` **AFTER** you enter a number of the gif
 
 ## Install
 install git: `sudo apt install git wget -y`
