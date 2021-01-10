@@ -3,7 +3,9 @@ A little shell script to play gif's over a virtual webcam with ffmpeg and v4l2. 
 
 
 ## Control
+### Exit
 Exit with `Strg c`  **BEFORE** you enter a number
+### Restart
 Restart wit `Strg c` **AFTER** you enter a number
 
 ## Install
