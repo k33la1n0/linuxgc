@@ -42,7 +42,12 @@ echo "----------------------------------------"
 echo "!Broadcasting..........................!"
 echo "----------------------------------------"
 echo ""
-ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "hflip,format=yuv420p" -f v4l2 $SOURCE
+select yn in "jitsi - BBB" "zoom"; do
+    case $yn in
+        jitsi ) ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "hflip,format=yuv420p" -f v4l2 $SOURCE;break;;
+        zoom ) ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "format=yuv420p" -f v4l2 $SOURCE;break;;
+    esac
+done
 echo "----------------------------------------"
 echo "!feel free to restart the script.......!"
 echo "----------------------------------------"
