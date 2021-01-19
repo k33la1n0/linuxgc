@@ -13,8 +13,8 @@ echo "webcam-streaming?"
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
-    y|yes|Y|1)
+    y|yes|Y|j|ja|J|1)
         ./script.sh;;
-    n|no|N|2)
+    n|no|N|nein|2)
         echo " > thank you for using linuxgc :)"; exit;;
 esac
