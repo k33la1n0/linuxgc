@@ -10,9 +10,9 @@ echo "Are you sure to install?"
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
-    y|yes|Y|1)
+    y|yes|Y|j|ja|J|1)
         sudo apt install ffmpeg v4l2loopback-dkms v4l-utils -y;;
-    n|no|N|2)
+    n|no|N|nein|2)
         echo " > thank you for using linuxgc :)"; exit;;
 esac
 echo "----------------------------------------"
@@ -45,8 +45,8 @@ echo "streaming gif's with vcam?"
 echo "yes (y) | no (n)"
 read -n 1 -p "" ans;
 case $ans in
-    y|yes|Y|1)
+    y|yes|Y|j|ja|J|1)
         ./script.sh;;
-    n|no|N|2)
+    n|no|N|nein|2)
         echo " > thank you for using linuxgc :)"; exit;;
 esac
