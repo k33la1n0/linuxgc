@@ -45,11 +45,11 @@ echo ""
 echo "would you use your vcam on bbb (b), jitsi (j) or zoom (z)?"
 read -n 1 -p "" ans;
 case $ans in
-    b|bbb|B)
+    b|bbb|B|1)
         ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "format=yuv420p" -f v4l2 $SOURCE;;
-    j|jitsi|J)
+    j|jitsi|J|2)
         ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "hflip,format=yuv420p" -f v4l2 $SOURCE;;
-    z|zoom|Z)
+    z|zoom|Z|3)
         ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "format=yuv420p" -f v4l2 $SOURCE;;
 esac
 echo "----------------------------------------"
