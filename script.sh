@@ -42,12 +42,16 @@ echo "----------------------------------------"
 echo "!Broadcasting..........................!"
 echo "----------------------------------------"
 echo ""
-select yn in "jitsi - BBB" "zoom"; do
-    case $yn in
-        jitsi ) ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "hflip,format=yuv420p" -f v4l2 $SOURCE;break;;
-        zoom ) ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "format=yuv420p" -f v4l2 $SOURCE;break;;
-    esac
-done
+echo "would you use your vcam on bbb (b), jitsi (j) or zoom (z)?"
+read -n 1 -p "" ans;
+case $ans in
+    b|bbb|B)
+        ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "format=yuv420p" -f v4l2 $SOURCE;;
+    j|jitsi|J)
+        ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "hflip,format=yuv420p" -f v4l2 $SOURCE;;
+    z|zoom|Z)
+        ffmpeg -re -stream_loop -1 -i ${file[$input]} -vf "format=yuv420p" -f v4l2 $SOURCE;;
+esac
 echo "----------------------------------------"
 echo "!feel free to restart the script.......!"
 echo "----------------------------------------"
