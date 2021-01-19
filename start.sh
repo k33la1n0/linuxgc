@@ -8,16 +8,13 @@ echo "----------------------------------------"
 echo "Perfect - vcam is set up...............!"
 echo "----------------------------------------"
 echo ""
-echo "----------------------------------------"
-echo "!Would you like start..................!" 
-echo "!webcam-streaming?.....................!"
-echo "!......................................!"
-echo "!Enter 1 to yes | Enter 2 to no........!"
-echo "----------------------------------------"
-echo ""
-select yn in "yes" "no"; do
-    case $yn in
-        yes ) ./script.sh; break;;
-        no ) exit;;
-    esac
-done
+echo "Would you like start" 
+echo "webcam-streaming?"
+echo "yes (y) | no (n)"
+read -n 1 -p "" ans;
+case $ans in
+    y|yes|Y|1)
+        ./script.sh;;
+    n|no|N|2)
+        echo " > thank you for using linuxgc :)"; exit;;
+esac
