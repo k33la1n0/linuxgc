@@ -7,16 +7,14 @@ echo "!...v4l-utils..........................!"
 echo "----------------------------------------"
 echo ""
 echo "Are you sure to install?"
-echo "----------------------------------------"
-echo "!Yes is number 1 | No is number 2......!"
-echo "----------------------------------------"
-echo ""
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) sudo apt install ffmpeg v4l2loopback-dkms v4l-utils -y; break;;
-        No ) exit;;
-    esac
-done
+echo "yes (y) | no (n)"
+read -n 1 -p "" ans;
+case $ans in
+    y|yes|Y|1)
+        sudo apt install ffmpeg v4l2loopback-dkms v4l-utils -y;;
+    n|no|N|2)
+        echo " > thank you for using linuxgc :)"; exit;;
+esac
 echo "----------------------------------------"
 echo "!The install is completed..............!"
 echo "----------------------------------------"
@@ -44,13 +42,11 @@ echo "----------------------------------------"
 echo ""
 echo "Would you like start"
 echo "streaming gif's with vcam?"
-echo "----------------------------------------"
-echo "!Yes is number 1 | No is number 2......!"
-echo "----------------------------------------"
-echo ""
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) ./script.sh; break;;
-        No ) echo "thank you for using linuxgc - have fun"; exit;;
-    esac
-done
+echo "yes (y) | no (n)"
+read -n 1 -p "" ans;
+case $ans in
+    y|yes|Y|1)
+        ./script.sh;;
+    n|no|N|2)
+        echo " > thank you for using linuxgc :)"; exit;;
+esac
